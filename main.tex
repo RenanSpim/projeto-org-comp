@@ -46,14 +46,28 @@
 
 \section{Introdução}
 \hspace*{+15pt} 
+A série de processadores Apple M marca uma mudança significativa na estratégia no ambiente corporativo do desenvolvimento de chips, culminando em uma arquitetura que alia alta eficiência energética com desempenho robusto. A transição da Apple entre processadores x86-64 para essa nova série começou em 2020, quando decidiu-se abandonar a Intel e passaram a utilizar-se de chips próprios em seus produtos, trazendo o mesmo nível de controle e otimização que já havia conquistado com os processadores da série A em dispositivos móveis.
+
+Vale ressaltar que não foi encontrado informações de quando o desenvolvimento desta tecnologia iniciou-se, mas é claro que demandou muito tempo e embasamento em várias outras conquistas da área de arquitetura e organização de computadores. Neste artigo, iremos analizar tanto a história, o desenvolvimento, a arquitetura e organização e o tão esperado desempenho destes inovadores chips, tendo em vista promover uma visão, ora geral, ora profunda, da arquitetura ARM em aparelhos comerciais.
 
 \section{História}
-\hspace*{+15pt} 
-A série M de chips da Apple representa uma mudança significativa na arquitetura dos computadores Mac, iniciada com o M1 em 2020. Não obstante, série M também representa a excelência em todas a área comercial de arquitetura de computadores. Esse processador, baseado em ARM, foi projetado para integrar CPU, GPU e memória unificada, permitindo eficiência energética e desempenho sem precedentes. Em 2021, a Apple lançou os M1 Pro e M1 Max, aprimorando essas capacidades com maior largura de banda de memória, mais núcleos de processamento e melhorias em gráficos, voltados para profissionais que exigem alto desempenho em aplicações gráficas e científicas.
+\hspace{+15pt} 
+A série M de chips da Apple representa uma mudança significativa na arquitetura dos computadores Mac, iniciada com o M1 em 2020. Não obstante, esta série de processadores também representa a excelência em toda a área comercial de arquitetura de computadores. Esses processadores, baseado em ARM, foi projetado para integrar CPU, GPU e memória unificada, permitindo eficiência energética e desempenho sem precedentes. Em 2021, a Apple lançou os M1 Pro e M1 Max, aprimorando essas capacidades com maior largura de banda de memória, mais núcleos de processamento e melhorias em gráficos, voltados para profissionais que exigem alto desempenho em aplicações gráficas e científicas.
+\subsection{Primeira Geração: Apple M1}
+\hspace{+15pt} 
+O primeiro processador da série, o M1, foi lançado em novembro de 2020. Esse SoC (System on a Chip) foi baseado na arquitetura ARM, tradicionalmente usada em dispositivos móveis, e incluía uma CPU de oito núcleos e uma GPU integrada com até oito núcleos. O M1 se destacou por sua eficiência energética, ao mesmo tempo que oferecia um desempenho impressionante, permitindo à Apple melhorar a autonomia de seus laptops e reduzir a dissipação de calor. Com o M1, a Apple também introduziu uma arquitetura de memória unificada, na qual CPU, GPU e outros componentes compartilham a mesma memória, o que reduz a latência e aumenta a eficiência.
+Em 2021, a Apple expandiu a linha M1 com os modelos M1 Pro e M1 Max, que ofereceram melhorias substanciais em termos de capacidade de processamento e memória. Esses chips, voltados para profissionais, trouxeram GPUs mais poderosas, suportando tarefas complexas de edição de vídeo e renderização gráfica. Em 2022, a Apple revelou o M1 Ultra, combinando dois M1 Max em um único chip, usando uma interconexão chamada UltraFusion, com desempenho similar ao de estações de trabalho, reforçando o compromisso da Apple com a escalabilidade e a modularidade de sua arquitetura própria.
 
-De acordo com estudos na IEEE, o M1 é um exemplo de SoC (System on a Chip), integrando diversas funcionalidades em um único chip, aumentando a eficiência energética. Isso é possível graças à arquitetura ARM, que reduz o consumo em relação aos processadores tradicionais de desktop.
+\subsection{Segunda Geração: Apple M2}
+\hspace{+15pt} 
+Em junho de 2022, a Apple apresentou o M2, uma atualização que oferecia desempenho até 18\% superior ao M1, com uma GPU aprimorada e um aumento na largura de banda da memória. A série M2 continuou a tradição de alta eficiência energética, enquanto introduzia avanços em aprendizado de máquina e IA. A Apple também lançou variantes do M2, como o M2 Pro e o M2 Max, que oferecem desempenho gráfico superior e são projetados para aplicativos que exigem processamento gráfico intenso
+\subsection{Terceira Geração: Apple M3}
+\hspace{+15pt}
+Lançado em outubro de 2023, o M3 é o primeiro processador da série M fabricado com o processo de 3 nm, trazendo melhorias significativas em desempenho e eficiência energética. Este chip é capaz de executar tarefas complexas, como ray tracing em tempo real, graças ao aumento de núcleos tanto na CPU quanto na GPU. A Apple também lançou versões avançadas do M3, o M3 Pro e o M3 Max, que incluem até 16 núcleos de CPU e 40 núcleos de GPU, com capacidades de memória RAM que chegam a 128 GB, tornando-os ideais para cargas de trabalho avançadas e uso profissional.
 
-Esse avanço é uma parte essencial da estratégia da Apple para ter controle total sobre o hardware e o software de seus dispositivos, otimizando o desempenho para suas necessidades específicas, como maior duração da bateria e melhor desempenho em tarefas gráficas e de IA.
+Esse avanço é uma parte essencial da estratégia da Apple para ter controle total sobre o hardware e o software de seus dispositivos, otimizando o desempenho para suas necessidades específicas, como maior duração da bateria e melhor desempenho em tarefas gráficas e de IA. 
+
+Vale considerar que estes processadores só puderam ser desenvolvidos devido devido à arquitetura ARM e o Conjunto Reduzido de Instruções (RISC), tópicos que abordaremos no próximo capítulo.
 
 \section{Arquitetura e Organização}
 \hspace{+15pt}
@@ -73,11 +87,12 @@ Esse avanço é uma parte essencial da estratégia da Apple para ter controle to
 
 \newpage
 \begin{thebibliography}{00}
-\bibitem{brain_like_computing} Ou, W., Xiao, S., Zhu, C., Han, W., \& Zhang, Q. (2022). 
-\textbf{An overview of brain-like computing: Architecture, applications, and future trends}. Frontiers in Neurorobotics, 16, 1041108.
-\bibitem{quantum_basics}Kane, B. (1998). 
-\textbf{A silicon-based nuclear spin quantum computer. } Nature, 393, 133-137.
-\bibitem{quantum_bits} Raj, G., Singh, D., e Madaan, A. (2018).
-\textbf{ Analysis of Classical and Quantum Computing Based on Grover and Shor Algorithm. }, 413-423.
+\bibitem{brain_like_computing} Ou, W., Xiao, S., Zhu, C., Han, W., \& Zhang, Q. (2022). \textbf{An overview of brain-like computing: Architecture, applications, and future trends}. Frontiers in Neurorobotics, 16, 1041108.
+
+\bibitem{apple_silicon_overview} Brown, M., \& Williams, J. (2022). \textbf{Apple Silicon: Powering the Future of Computing}. IEEE Xplore. Disponível em: https://ieeexplore.ieee.org/abstract/document/9926315.
+
+\bibitem{apple_at_work} Apple Inc. (2021). \textbf{Apple at Work – M1 Overview}. Apple Business. Disponível em: https://www.apple.com/br/business/mac/pdf/Apple-at-Work-M1-Overview.pdf.
+
+\bibitem{hardware_acceleration} Chen, Y., \& Li, X. (2021). \textbf{Hardware Acceleration Techniques for Next-Generation Computing}. In S. Kumar \& P. Jones (Eds.), Emerging Technologies in Computing (pp. 509-523). Springer, Cham. Disponível em: https://link.springer.com/chapter/10.1007/978-3-030-93677-8\_48.
 \end{thebibliography}
 \end{document}
