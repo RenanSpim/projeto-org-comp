@@ -70,6 +70,24 @@ Esse avanço é uma parte essencial da estratégia da Apple para ter controle to
 Vale a consideração de que estes processadores só puderam ser desenvolvidos devido devido à arquitetura ARM e o Conjunto Reduzido de Instruções (RISC), tópicos que abordaremos no próximo capítulo.
 
 \section{Arquitetura e Organização}
+
+\hspace*{+15pt} A série de chips M da Apple representa uma das arquiteturas de System-on-a-Chip (SoC) mais avançadas no mercado. Esses chips integram múltiplos componentes, como CPU, GPU, memória e unidades de processamento neural, em um único chip de silício, permitindo maior eficiência energética e uma integração mais profunda entre os componentes do hardware e o software.
+
+Os chips da série M possuem um grande número de transistores, com o M1 contando com 16 bilhões, sendo capaz de fazer até 11 trilhões de operações por segundo. Além disso, a GPU integrada nesses chips conta com 8 núcleos no M1 e 32 núcleos no M1 Max, permitindo um processamento gráfico robusto sem a necessidade de uma GPU dedicada. Mas atualmente, com o chip M3, a Apple deu mais um salto significativo em termos de potência e eficiência, trazendo uma quantidade ainda maior de transistores, ultrapassando os 25 bilhões, o que permite uma capacidade de processamento ainda mais avançada e otimizada para tarefas intensivas de cálculo. Além disso, a GPU integrada no M3 também foi aprimorada, contando com até 40 núcleos em sua versão mais poderosa, oferecendo desempenho gráfico excepcional.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Apple_M1.jpg/1200px-Apple_M1.jpg}
+    \caption{Chip M1}
+    \label{fig:apple_m1}
+\end{figure}
+
+\subsection{Núcleos}
+Os chips da série M empregam uma arquitetura heterogênea de múltiplos núcleos - uma abordagem inspirada na arquitetura ARM big.LITTLE - combinando núcleos de alto desempenho (Firestorm) e núcleos de alta eficiência (Icestorm). Essa combinação permite que o sistema ajuste seu consumo energético com base na tarefa em execução, dando preferência para núcleos de alto desempenho em tarefas intensivas, enquanto, para operações mais leves, núcleos de alta eficiência energética são usados.
+
+\subsection{Memória}
+Uma das inovações fundamentais dessa arquitetura é o conceito de memória unificada. Diferente dos designs tradicionais, nos quais CPU e GPU utilizam memórias separadas, a arquitetura dos chips M permite que todos os processadores acessem a mesma memória física. Isso reduz a necessidade de cópias redundantes de dados e melhora a comunicação entre CPU e GPU, resultando em um desempenho mais eficiente e menores tempos de resposta. Tal memória unificada também conta com uma largura de banda de 68.25 GB/s para o processador M1, podendo chegar até 400 GB/s para o M1 Max.
+
 \hspace{+15pt}
 
 \section{Desempenho}
